@@ -1,0 +1,75 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "author": "Nikita Metelev",
+      "title": "test 1",
+      "body": "test 1",
+      "status": "complete",
+      "date": "2025-03-14"
+    },
+    {
+      "id": 2,
+      "author": "Nikita Metelev",
+      "title": "test 2",
+      "body": "test 2",
+      "status": "received",
+      "date": "2025-03-14"
+    },
+
+    {
+      "id": 3,
+      "author": "Nikita Metelev",
+      "title": "test 3",
+      "body": "test 3",
+      "status": "received",
+      "date": "2025-03-14"
+    },
+
+    {
+      "id": 4,
+      "author": "Nikita Metelev",
+      "title": "test 4",
+      "body": "test 4",
+      "status": "work",
+      "date": "2025-03-14"
+    },
+
+
+    {
+      "id": 5,
+      "author": "Mike Johnson",
+      "title": "test 5",
+      "body": "test 5",
+      "status": "received",
+      "date": "2025-03-14"
+    },
+
+    {
+      "id": 6,
+      "author": "Mike Johnson",
+      "title": "test 6",
+      "body": "test 6",
+      "status": "received",
+      "date": "2025-03-14"
+    },
+
+    {
+      "id": 7,
+      "author": "Jane Smith",
+      "title": "test 5",
+      "body": "test 5",
+      "status": "received",
+      "date": "2025-03-14"
+    },
+
+    {
+      "id": 8,
+      "author": "Jane Smith",
+      "title": "test 6",
+      "body": "test 6",
+      "status": "work",
+      "date": "2025-03-14"
+    }
+  ]
+}

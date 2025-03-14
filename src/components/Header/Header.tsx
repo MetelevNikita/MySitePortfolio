@@ -1,85 +1,65 @@
 'use client'
 
-import { FC, useState } from 'react'
-import Image from 'next/image'
+import { FC, useEffect, useState } from 'react'
 import Link from 'next/link'
 
 //
 
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Col, Row } from 'react-bootstrap'
 
-//
+const Header:FC = () => {
 
-import Logo from '@/asset/Header/logo.svg'
-import menuOpen from '@/asset/Header/menu_open.svg'
-import menuClose from '@/asset/Header/menu_close.svg'
-
-// types
-
-import { menuType } from '@/types/menuType'
+  const [menu, setMenu] = useState<Boolean>(false)
 
 
-const Header: FC = () => {
-
-
-
-  const menuList: menuType[] = [
+  const menuArr = [
     {
-      id: 1,
-      link: '/about',
-      title: 'о нас'
+      title: 'Портфолио',
+      link: '/portfolio'
     },
 
     {
-      id: 2,
-      link: '/portfolio',
-      title: 'работы'
+      title: 'О нас',
+      link: '/about'
     },
 
     {
-      id: 3,
-      link: '/subscribe',
-      title: 'подписывайтесь'
-    },
-
-    {
-      id: 4,
-      link: '/about',
-      title: 'About'
+      title: 'Контакты',
+      link: '/contacts'
     }
   ]
 
 
-  const [menu, setMenu] = useState<Boolean>(false)
+
 
 
   return (
 
     <Container>
-      <Row className='d-flex flex-row align-items-center' style={{ height: '100px' }}>
 
+      <Row className='mb-3 mt-3'>
 
         <Col className='d-flex justify-content-start'>
-          <Image src={Logo} alt='logo' width={50} height={50}></Image>
+          <div>LOGO</div>
         </Col>
 
 
-        <Col className='d-flex justify-content-end'  onClick={() => setMenu(!menu)}>{(!menu) ? <Image src={menuOpen} alt='menu' width={30} height={30}></Image> : <Image src={menuClose} alt='menu' width={20} height={20}></Image>}</Col>
-
-
+        <Col className='d-flex justify-content-end'>
+          <div onClick={() => setMenu(!menu)}>{(menu) ? 'CLOSE' : 'OPEN'}</div>
+        </Col>
 
       </Row>
 
 
       <Row>
-
-        <Col>{menuList.map((item) => {
-          return <Col key={item.id} className='d-flex justify-content-center'><Link href={item.link}>{item.title}</Link></Col>
-        })}</Col>
-
+        {(menu) ? menuArr.map((item, index) => {
+          return <Link key={index} href={item.link}>{item.title}</Link>
+        }) : <></>}
       </Row>
+
     </Container>
 
   )
 }
+
 export default Header

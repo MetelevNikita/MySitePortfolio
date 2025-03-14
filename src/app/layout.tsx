@@ -6,9 +6,6 @@ import "./globals.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container } from "react-bootstrap";
 
-// components
-
-import Header from '@/components/Header/Header'
 
 // fonts
 
@@ -31,8 +28,6 @@ export default function RootLayout({
     <html lang="en" className={montserrat.className}>
       <body>
         <Container>
-
-          <Header />
 
           {children}
 
